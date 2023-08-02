@@ -7,6 +7,6 @@ const app = express();
 
 app.use(cors())
 app.use('/' , router )
-const port = 8000;
+const port = process.env.port || 8000;
 dbConnection();
 app.listen(port , () => console.log(`Server is running on the port ${port}`));
